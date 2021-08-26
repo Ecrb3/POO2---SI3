@@ -14,6 +14,7 @@ public class Livro {
     private Autor autor;
     private Biblioteca biblioteca;
     private Capitulo capitulos;
+    private int capitu;
 
     public Livro(String isbn, Autor autor) {
         this.isbn = isbn;
@@ -32,11 +33,17 @@ public class Livro {
         return capitulos;
     }
 
-    
+    public Biblioteca getBiblioteca() {
+        return biblioteca;
+    }
+
+    public void setBiblioteca(Biblioteca biblioteca) {
+        this.biblioteca = biblioteca;
+    }
 
     @Override
     public String toString() {
-        return "Livro{" + "isbn=" + isbn + ", autor=" + autor + ", biblioteca=" + biblioteca + ", capitulos=" + capitulos + '}';
+        return "Livro{" + "isbn=" + isbn + ", autor=" + autor.getNome() + ", biblioteca=" + biblioteca + ", capitulos=" + capitu + '}';
     }
 
 
